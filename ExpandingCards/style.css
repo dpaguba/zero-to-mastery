@@ -1,48 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 *{
-    /*
-    Die Eigenschaft box-sixing entscheidet sich dafuer, wie die Breite und Hoehe berechnet wird.
-
-    Wir nehmen an, dass das Element die Umrandung hat. (border: 2px solid black)
-    content-box - zur Breite wird noch die groesse der Umrandung hinzugefuegt. Z.B. sei die
-    angegebene Breite des Elements 100px und die Umrandung ist 2px gross. Die gesamte Laenge
-    (Breite + Umrandung) betraegt dann 102px.
-    border-box - sei die angegebene Breite des Elements 100px und die Umrandung 2px.
-    Die gesamte Laaenge wird 100px betragen, indem die Umrandung 2px gross ist und die Breite
-    des Elements 98px ist.
-    */
     box-sizing: border-box;
 }
 
 body{
     font-family: 'Muli', sans-serif;
-
-    /*
-    Man kann die vertikale Anpassung nicht sehen, ohne die Eigenschaft
-    height hinzuzufuegen
-    */
     display: flex;
-    /*flex-direction: column;*/
     align-items: center;
     justify-items: center;
     height: 100vh;
-
-    /*
-    Die Eigenschaft overflow ist fuer die korrekte Vorstellung des Elements zustaendig.
-    Wenn das Element groesser ist, als die angegebene Breite oder Hoehe, sagt dann overflow zu dem
-    Browser, was eigentlich mit dem Element gemacht werden soll.
-
-    visible - ist der votgegebener Wert. Der Content wird NICHT abgescnitten und darf
-    die angegebene Hoehe und Breite ueberschreiten.
-    hidden - der Content wird abgeschnitten und wird keine Scrollbar erstellt.
-    scroll - der Content wird NICHT abgeschnitten und wird die Bildaufleiste unabhaengig davon erstellt, ob
-    das Element die angegebene Hoehe oder Breite ueberschritten hat.
-    auto - der Browser entscheidet sich selber.
-    */
     overflow: hidden;
-
-    /*Loescht alle Luecken zwischen body und verschachtelten Elementen*/
     margin: 0;
 }
 
@@ -52,86 +20,16 @@ body{
 }
 
 .panel{
-    /*
-    auto - ermoeglicht die Groessenanpassung und das Bild wird nicht abgeschnitten.
-    contain -  vergroessert das Bild so, dass das Bild den ganzen Block ueberdeckt.
-    Bild wird aber nicht abgeschnitten und die Groessenverhaeltnis bleiben unveraendert.
-    cover - (umgekehrt von contain) versucht das Bild maximal zu vergroessern. Das Bild
-    kann zwar abgeschnitten werden, aber das Groessenverhaeltnis bleibt unveraendert.
-    percentage - die Bildgroesse wird der Prozentzahl angepasst.
-    */
     background-size: cover;
-
-    /*
-    Die Eigenschaft background-position bestimmt die Anfangsposition des Hintergrunds.
-
-    top - das Hintergrundbild wird innerhalb des Blocks oben platziert.
-    bottom - das Hintergrundbild wird innerhalb des Blocks unten platziert.
-    center - das Hintergrundbild wird innerhalb des Blocks zentriert.
-
-    Es bestehen auch andere Moeglichkeiten background-position anzugeben:
-    background-position: 25% 75%;
-    background-position: bottom 50px right 100px;
-    background-position: right 35% bottom 45%;
-    */
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
     border-radius: 50px;
     color: #fff;
     cursor: pointer;
-
-    /*
-    ?
-    */
     flex: 0.5;
     margin: 10px;
-
-    /*
-    Die Eigenschaft position bestimmt, wie das Element im Document platziert ist.
-    top, right, left, botton bestimmen die Endposition des Elements.
-
-    static - vorgegebener Wert. top, right, left, botton, z-index koennten nicht
-    angewendet werden.
-    relative - schiebt das Element in Bezug auf die urspruengliche Position.
-    absolute - das Element wird neuplatziert und die Ausgangsposition hat keinen Einfluss
-    darauf. Die anderen Elementen platzieren sich so, als ob das Element mit der absoluten
-    Position ueberhaupt nicht exestiert. Die Koordinaten fuer top, right, left, botton
-    werden von dem Elternelement berechnet
-    fixed - funktioniert genauso wie absolute, aber wird zu Window angewendet. D.h. wenn
-    die Seite gescrollt wird, wird die Position des Elements nicht geaendert.
-    */
     position: relative;
-
-    /*
-    transition ermoeglicht uns, den Uebergangszustand des Elements zu bestimmen.
-
-    /* Применить к 1 свойству */
-    /* имя свойства | длительность */
-    /*transition: margin-left 4s;*/
-
-    /* имя свойства | длительность | задержка */
-    /*transition: margin-left 4s 1s;*/
-
-    /* имя свойства | длительность | временная функция | задержка */
-    /*transition: margin-left 4s ease-in-out 1s;*/
-
-    /* Применить к 2 свойствам */
-    /*transition: margin-left 4s, color 1s;*/
-
-    /* Применить ко всем изменённым свойствам */
-    /*transition: all 0.5s ease-out;*/
-    /*
-    Schluesselworte:
-    ease - vergebener Wert. Der Uebergang erfolg langsam.
-    Der Anlauf und die Verlangsammung sind schnell.
-    linear - Der Uebergang erfolgt gleichmaessig, ohne jegliche Beschleunigung.
-    ease-in - Der Uebergang erfolgt zuerst langsam und dann beschleunigt sich.
-    ease-out - Der Uebergang erfolgt am Anfang schnell und verlangsamt sich.
-    ease-in-out - Der Uebergang beginnt langsam und endet langsam
-    */
-
-    /*fuer alle Elemente, fuer die flex gilt, wird die 0.7s ease-in transition angewendet*/
     transition: flex 0.7s ease-in;
 }
 
@@ -141,11 +39,6 @@ body{
     bottom: 20px;
     left: 20px;
     margin: 0;
-
-    /*
-    opacity устанавливает непрозрачность элемента.
-    Der Wert von Opacity ist zwischen 0 und 1
-    */
     opacity: 0;
 }
 
@@ -158,19 +51,11 @@ body{
     transition: opacity 0.3s ease-in 0.4s;
 }
 
-
-/*
-    Falls window kleiner als 480px ist, werden die folgenden CSS-Eigenschaften angewendet.
-*/
 @media(max-width: 480px){
     .container{
         width: 100vw;
     }
 
-    /*
-    nth-of-type() hat die gleiche Funktionalitaet, wie :nth-child(),
-    aber nth-of-type() ist besser
-    */
     .panel:nth-of-type(4),.panel:nth-of-type(4){
         display: none;
     }
