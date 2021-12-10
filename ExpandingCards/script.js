@@ -15,7 +15,7 @@ function removeActiveClasses() {
 
 /*
 ------------------------------------------------------------------------------
-Andere Moeglichkeit das Problem zu loesen:
+Another way to solve the problem:
 
 const panels = document.querySelectorAll(".panel");
 let currentActive = document.querySelector(".active");
