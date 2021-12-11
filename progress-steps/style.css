@@ -2,8 +2,7 @@
 
 :root {
     /*
-    Die angelegten Variablen beinhalten die Farben, die weiter
-    oft benutzt werden.
+    Variables are initialized with color values, that will be often used
     */
     --line-border-fill: #3498db;
     --line-border-empty: #e0e0e0;
@@ -38,24 +37,21 @@ body {
 }
 
 .steps::before {
+
     /*
-    Wenn man ::before oder ::after nutzt, muss man immer die Eigenschaft content: ''; haben
+    if you use ::before or ::after, you need to add a property content: '';
     */
     content: '';
     background-color: var(--line-border-empty);
     position: absolute;
     top: 50%;
     left: 0;
-
-    /*
-
-    */
     transform: translateY(-50%);
     height: 4px;
     width: 100%;
 
     /*
-    je kleiner der Index ist, desto tiefer befindet sich das Element
+    The z-index CSS property sets the z-order of a positioned element and its descendants or flex items
     */
     z-index: -1;
 }
@@ -111,27 +107,8 @@ body {
 }
 
 /*
-    Die Pseudoklasse :focus wird aktiviert, indem man auf input-element clickt.
+    Pseudo-class :focus is active, when you click input element
 */
 .btn:focus {
-    /*
-    Funktioniert wie die Umrandung. outline malt eine Linie um die Umrandung herum.
-    Wenn outline ist on, erzeugt es einen Effekt der Markierung.
-
-    Свойство outline-style задает стиль структуры и может иметь одно из следующих значений:
-    dotted - Определяет пунктирную структуру
-    dashed - Определяет пунктирную структуру
-    solid - Определяет сплошной контур
-    double - Определяет двойной контур
-    groove - Определяет трехмерную контурную канавку
-    ridge - Определение трехмерного ребристого контура
-    inset - Определяет контур 3D-вставки
-    outset - Определение трехмерного контура начала
-    none - Не определяет структуру
-    hidden - Определяет скрытый контур
-
-
-    */
     outline: 0;
 }
-
