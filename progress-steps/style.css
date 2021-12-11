@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+    /*
+    Die angelegten Variablen beinhalten die Farben, die weiter
+    oft benutzt werden.
+    */
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f7fb;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.steps::before {
+    /*
+    Wenn man ::before oder ::after nutzt, muss man immer die Eigenschaft content: ''; haben
+    */
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    /*
+
+    */
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+
+    /*
+    je kleiner der Index ist, desto tiefer befindet sich das Element
+    */
+    z-index: -1;
+}
+
+.progress-line {
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+}
+
+.btn {
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
+
+/*
+    Die Pseudoklasse :focus wird aktiviert, indem man auf input-element clickt.
+*/
+.btn:focus {
+    /*
+    Funktioniert wie die Umrandung. outline malt eine Linie um die Umrandung herum.
+    Wenn outline ist on, erzeugt es einen Effekt der Markierung.
+
+    Свойство outline-style задает стиль структуры и может иметь одно из следующих значений:
+    dotted - Определяет пунктирную структуру
+    dashed - Определяет пунктирную структуру
+    solid - Определяет сплошной контур
+    double - Определяет двойной контур
+    groove - Определяет трехмерную контурную канавку
+    ridge - Определение трехмерного ребристого контура
+    inset - Определяет контур 3D-вставки
+    outset - Определение трехмерного контура начала
+    none - Не определяет структуру
+    hidden - Определяет скрытый контур
+
+
+    */
+    outline: 0;
+}
+
