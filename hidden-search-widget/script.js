@@ -5,4 +5,4 @@ function expandSearchBar(){
     container.classList.toggle("active");
 }
 
-btn.addEventListener("click", expandSearchBar)
+btn.addEventListener("click", expandSearchBar);
