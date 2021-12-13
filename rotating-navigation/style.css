@@ -8,28 +8,15 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: #333;
     color: #222;
-
-    /*
-    overflow-x ist fuer die horizontale Daratellung des Blockelements zustaendig
-    overflow-y ist fuer die vertikale Daratellung des Blockelements zustaendig
-    */
     overflow-x: hidden;
     margin: 0;
 }
 
 .container {
     background-color: #fafafa;
-
-    /*
-    transform-origin bestimmt die Koordinaten, bezueglich auf die die Transformation stattfindet.
-    */
     transform-origin: top left;
     transition: transform 0.5s linear;
     width: 100vw;
-
-    /*
-    bestimmt die minimale Hoehe des Elements.
-    */
     min-height: 100vh;
     padding: 50px;
 }
