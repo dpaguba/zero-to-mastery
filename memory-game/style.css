@@ -33,6 +33,12 @@ body {
     cursor: pointer;
 }
 
-.found{
+.matched{
     cursor: default;
+    pointer-events: none;
+}
+
+.no-event{
+    cursor: default;
+    pointer-events: none;
 }
