@@ -34,7 +34,6 @@ function checkActiveState(){
 next.addEventListener("click", goNext);
 prev.addEventListener("click", goPrev);
 
-
 //---------------------------------------------------------------------
 // Another way to make this functionality:
 // next.addEventListener('click', () => {

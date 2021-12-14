@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 :root {
-    /*
-    Variables are initialized with color values, that will be often used
-    */
     --line-border-fill: #3498db;
     --line-border-empty: #e0e0e0;
 }
@@ -49,10 +46,6 @@ body {
     transform: translateY(-50%);
     height: 4px;
     width: 100%;
-
-    /*
-    The z-index CSS property sets the z-order of a positioned element and its descendants or flex items
-    */
     z-index: -1;
 }
 
@@ -106,9 +99,6 @@ body {
     cursor: not-allowed;
 }
 
-/*
-    Pseudo-class :focus is active, when you click input element
-*/
 .btn:focus {
     outline: 0;
 }
