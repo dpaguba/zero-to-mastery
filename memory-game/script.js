@@ -34,42 +34,49 @@ function fillBars(){
 
 fillBars();
 
-function makeActive(i){
-    let active = document.querySelectorAll(".active");
-        if (active.length <= 1){
-            bars[i].innerHTML = barsWithSymbol[i];
-        }else if (active.length === 2){
-            if (active[0] === active[1]){
-                for (let j = 0; j < active.length; j++) {
-                    active[i].disabled = true;
-                }
-            }else {
-                bars[i].innerHTML = "🐾";
-            }
-        }
-}
-
-
 for (let i = 0; i < bars.length; i++) {
 
-    // bars[i].addEventListener("click", ()=>{
-    //     let active = document.querySelectorAll(".active");
-    //     if (+active <= 0){
-    //         bars[i].innerHTML = barsWithSymbol[i];
-    //     }else if (+active === 2){
-    //         if (active[0] === active[1]){
-    //             for (let j = 0; j < active.length; j++) {
-    //                 active[j].removeEventListener("click");
-    //             }
-    //         }else {
-    //
-    //         }
-    //     }else {
-    //
-    //     }
-    // });
-
-    bars[i].addEventListener("click", makeActive);
+    bars[i].addEventListener("click", ()=>{
+        bars[i].innerHTML = barsWithSymbol[i];
+        bars[i].classList.add("active");
+        // let active = document.querySelectorAll(".active");
+        // if (active.length <= 1){
+        //     bars[i].innerHTML = barsWithSymbol[i];
+        //     bars[i].classList.add("active");
+        //     if (active.length === 2) {
+        //         console.log(active);
+        //         if (active[0].textContent === active[1].textContent) {
+        //             for (let j = 0; j < active.length; j++) {
+        //                 active[j].classList.remove("active");
+        //             }
+        //         } else {
+        //             bars[i].innerHTML = "🐾";
+        //         }
+        //     }
+        // }
+    });
 }
 
+function play() {
+    let count = 0;
 
+    while (count < 10){
+        let active = document.querySelectorAll(".active");
+
+        if (active.length === 2) {
+            if (active[0].textContent === active[1].textContent) {
+                count++;
+                for (let j = 0; j < active.length; j++) {
+                    active[j].classList.remove("active");
+                }
+            }else {
+                for (let j = 0; j < active.length; j++) {
+                    active[j].classList.remove("active");
+                    active[j].innerHTML = "🐾";
+                }
+            }
+        }
+    }
+
+}
+play();
