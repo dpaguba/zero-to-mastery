@@ -29,7 +29,10 @@ body {
     text-align: center;
     font-size: 3.5rem;
     padding: 15px;
-    background-color: #967c61
-;
+    background-color: #967c61;
+    cursor: pointer;
 }
 
+.found{
+    cursor: default;
+}
