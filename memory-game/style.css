@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #cbab7f;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.game-field{
+    max-width: 800px;
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    grid-template-columns: repeat(8, 12.5%);
+
+}
+
+
+.bar{
+    border: 2px solid #5d432c;
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 15px;
+    background-color: #967c61
+;
+}
+
