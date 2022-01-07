@@ -14,3 +14,12 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.calculator{
+    width: 300px;
+    height: 550px;
+    background-color: #1C1C1C;
+    padding: 10px;
+    outline: 8px solid #555555;
+    border-radius: 5%;
+}
