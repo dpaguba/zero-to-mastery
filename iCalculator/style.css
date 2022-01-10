@@ -23,3 +23,12 @@ body {
     outline: 8px solid #555555;
     border-radius: 5%;
 }
+
+.calculator .result-window{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    height: calc(100% - 350px);
+    background-color: #1C1C1C;
+    color: white;
+}
