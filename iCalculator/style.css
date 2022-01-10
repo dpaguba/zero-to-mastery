@@ -40,3 +40,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+.result-window p::-webkit-scrollbar {
+    display: none;
+}
