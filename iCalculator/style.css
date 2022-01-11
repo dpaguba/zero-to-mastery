@@ -56,3 +56,16 @@ body {
             "zero zero dot equal";
     justify-items: center;
 }
+
+.btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    user-select: none;
+}
