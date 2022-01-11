@@ -44,3 +44,15 @@ body {
 .result-window p::-webkit-scrollbar {
     display: none;
 }
+
+.calculator .math-btn{
+    display: grid;
+    gap: 7px;
+    grid-template-areas:
+            "ac plus-minus percent divide"
+            "seven eight nine multiply"
+            "four five six minus"
+            "one two three plus"
+            "zero zero dot equal";
+    justify-items: center;
+}
