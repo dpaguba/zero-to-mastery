@@ -87,3 +87,11 @@ body {
     background-color: #505050;
     transition: filter 0.4s ease-out;
 }
+
+.btn.zero{
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+    padding-left: 25px;
+    text-align: left;
+}
