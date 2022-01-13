@@ -118,3 +118,15 @@ body {
     color: #FF9500;
     background-color: white;
 }
+
+footer{
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-family: inherit;
+    font-size: 20px;
+    color: #555555;
+}
