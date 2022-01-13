@@ -130,3 +130,13 @@ footer{
     font-size: 20px;
     color: #555555;
 }
+
+.fa{
+    color: #555555;
+    cursor: pointer;
+}
+
+.fa:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
