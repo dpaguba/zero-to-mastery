@@ -26,3 +26,8 @@ function changeSign(){
     //convert array to string with separator ""
     screen.innerHTML = list.join("");
 }
+
+function calculatePercent(){
+    screen.innerHTML = String(Number(screen.innerText) / 100);
+    changeSign();
+}
