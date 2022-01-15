@@ -40,3 +40,41 @@ function addDot(){
 function includeDot(){
     return screen.innerText.includes(".");
 }
+
+function addNumber(event){
+    let value = event.target.innerText;
+    if (first.length < 7){
+        if (sign === ""){
+            if (value.length === 1 && screen.innerText === "0"){
+                first = value;
+                screen.innerHTML = value;
+            }else {
+                first += value;
+                screen.innerHTML += value;
+            }
+        }else {
+            if (second === ""){
+                screen.innerHTML = "";
+                changeSecond(value);
+            }else{
+                changeSecond(value);
+            }
+
+        }
+        changeSize();
+    }else if (first.length >= 7 && second.length < 7){
+        if (sign !== ""){
+            if (second === ""){
+                screen.innerHTML = "";
+                changeSize();
+                changeSecond(value);
+            }else{
+                changeSecond(value);
+            }
+        }
+    }else if (first.length === 7 && second.length === 7){
+        if (sign !== ""){
+            calc();
+        }
+    }
+}
