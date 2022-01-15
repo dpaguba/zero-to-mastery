@@ -78,3 +78,13 @@ function addNumber(event){
         }
     }
 }
+
+function changeSecond(value){
+    if (value.length === 1 && screen.innerText === "0"){
+        second = value;
+        screen.innerHTML = value;
+    }else {
+        second += value;
+        screen.innerHTML += value;
+    }
+}
