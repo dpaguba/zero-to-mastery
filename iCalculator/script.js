@@ -31,3 +31,12 @@ function calculatePercent(){
     screen.innerHTML = String(Number(screen.innerText) / 100);
     changeSign();
 }
+
+function addDot(){
+    screen.innerHTML = (screen.innerText[screen.innerText.length - 1] !== "." && !includeDot()) ? screen.innerHTML += "." : screen.innerHTML;
+    changeSize();
+}
+
+function includeDot(){
+    return screen.innerText.includes(".");
+}
