@@ -110,3 +110,14 @@ function multiply(){
         sign = "*";
     }
 }
+
+function subtract(){
+    if (sign === ""){
+        first = screen.innerText;
+        sign = "-";
+    }else if (sign === "-"){
+        calc();
+    } else{
+        sign = "-";
+    }
+}
