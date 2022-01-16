@@ -99,3 +99,14 @@ function divide(){
         sign = "/";
     }
 }
+
+function multiply(){
+    if (sign === ""){
+        first = screen.innerText;
+        sign = "*";
+    }else if (sign === "*"){
+        calc();
+    } else{
+        sign = "*";
+    }
+}
