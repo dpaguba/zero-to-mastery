@@ -88,3 +88,14 @@ function changeSecond(value){
         screen.innerHTML += value;
     }
 }
+
+function divide(){
+    if (sign === ""){
+        first = screen.innerText;
+        sign = "/";
+    }else if (sign === "/"){
+        calc();
+    } else{
+        sign = "/";
+    }
+}
