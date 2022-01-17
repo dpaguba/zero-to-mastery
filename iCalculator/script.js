@@ -121,3 +121,14 @@ function subtract(){
         sign = "-";
     }
 }
+
+function add(){
+    if (sign === ""){
+        first = screen.innerText;
+        sign = "+";
+    }else if (sign === "+"){
+        calc();
+    } else{
+        sign = "+";
+    }
+}
