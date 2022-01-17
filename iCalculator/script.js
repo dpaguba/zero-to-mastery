@@ -173,3 +173,16 @@ function changeSize(){
         alert("The number is too big, therefore scroll right to see the whole number!");
     }
 }
+
+document.querySelector(".ac").addEventListener("click", clearAll);
+document.querySelector(".plus-minus").addEventListener("click", changeSign);
+document.querySelector(".percent").addEventListener("click", calculatePercent);
+document.querySelector(".dot").addEventListener("click", addDot);
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i].addEventListener("click", addNumber);
+}
+document.querySelector(".divide").addEventListener("click", divide);
+document.querySelector(".multiply").addEventListener("click", multiply);
+document.querySelector(".minus").addEventListener("click", subtract);
+document.querySelector(".plus").addEventListener("click", add);
+document.querySelector(".equal").addEventListener("click", calc);
