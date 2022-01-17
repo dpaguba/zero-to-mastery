@@ -132,3 +132,32 @@ function add(){
         sign = "+";
     }
 }
+
+function calc(){
+    switch (sign){
+        case "/":
+            if (second === "0"){
+                alert("Division by 0 is impossible!");
+                clearAll();
+                break;
+            }else{
+                screen.innerHTML = String((+first) / (+second));
+                break;
+            }
+        case "*":
+            screen.innerHTML = String((+first) * (+second));
+            break;
+        case "-":
+            screen.innerHTML = String((+first) - (+second));
+            break;
+        case "+":
+            screen.innerHTML = String((+first) + (+second));
+            break;
+        default:
+            alert("ERROR: Try it again!");
+    }
+
+    first = screen.innerText;
+    second = "";
+    changeSize();
+}
