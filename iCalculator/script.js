@@ -59,7 +59,6 @@ function addNumber(event){
             }else{
                 changeSecond(value);
             }
-
         }
         changeSize();
     }else if (first.length >= 7 && second.length < 7){
@@ -165,10 +164,9 @@ function calc(){
 function changeSize(){
     if (screen.innerText.length > 7){
         document.getElementById("result").style.fontSize = "2.25em";
-    } else {
+    }else {
         document.getElementById("result").style.fontSize = "4em";
     }
-
     if (screen.innerText.length > 14){
         alert("The number is too big, therefore scroll right to see the whole number!");
     }
